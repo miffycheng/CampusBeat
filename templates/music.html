@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Music Hub 🎵</title>
+  <!-- Link to CSS -->
+  <link rel="stylesheet" href="../static/style/main.css"/>
+  <!-- Link to JS Script -->
+  <script defer src="../static/script/modal.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="title">🎶 Campus Beats</div>
+      <ul class="nav-links">
+        <li><a href="home" id="homeLink">Home</a></li>
+        <li><a href="collection" id="collectionLink">My Lists</a></li>
+        <li><a href="login" id="loginlink">My Lists</a></li>
+      </ul>
+      
+    </nav>
+  </header>
+
+  <!-- Home Section with Search & Top 5 -->
+  <section class="home">
+    <div class="home-content">
+      <h1>DISCOVER YOUR NEXT FAVORITE SONG</h1>
+      <p>Explore songs, artists, and playlists tailored for you</p>
+      <div class="search-bar">
+        <input id="search" type="text" placeholder="Search by song or artist" />
+        <button id="searchButton" onclick="performSearch()">Search</button>
+      </div>
+
+      <div id="searchResults"></div>
+         <!-- Dynamically populated by function performSearch() in modal.js -->
+    </div>
+
+    <!-- Show top 5 songs by likes -->
+    <div class="home-right">
+      <h2>Top 5 Songs</h2>
+      <div id="topSongsContainer">
+        <!-- Dynamically populated by function loadTopSongs() in modal.js -->
+      </div>
+    </div>
+  </section>
+
+  <section id="collectionSection">
+    <h2 id="collectionTitle"> Your List</h2>
+    <div id="collectionContainer"></div>
+      <!-- Dynamically populated by function loadMyCollection() in modal.js -->
+  </section>
+
+</body>
+</html>
